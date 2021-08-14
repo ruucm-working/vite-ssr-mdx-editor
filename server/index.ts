@@ -1,6 +1,12 @@
 import express from "express";
 import { createPageRender } from "vite-plugin-ssr";
 import * as vite from "vite";
+import dotenv from "dotenv";
+console.log("dotenv", dotenv);
+dotenv.config();
+
+console.log("process.env.NODE_ENV", process.env.NODE_ENV);
+
 import { serverSocket } from "./server-socket";
 
 const isProduction = process.env.NODE_ENV === "production";
