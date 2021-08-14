@@ -1,7 +1,7 @@
 // console.log("process.env.NODE_ENV", process.env.NODE_ENV);
 
 export const hostname =
-  process.env.NODE_ENV === "development"
+  process.env.SERVER_ENV === "development"
     ? "localhost"
     : "ec2-54-67-51-168.us-west-1.compute.amazonaws.com";
 
