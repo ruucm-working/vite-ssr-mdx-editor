@@ -10,7 +10,7 @@ export default IndexPage;
 
 function IndexPage() {
   const [value, setValue] = useState("");
-  const hostname = window?.location.hostname;
+  const hostname = typeof window !== "undefined" && window.location.hostname;
 
   const [socketUrl, setSocketUrl] = useState(`ws://${hostname}:${SOCKET_PORT}`);
   console.log("socketUrl", socketUrl);
