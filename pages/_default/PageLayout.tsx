@@ -15,6 +15,7 @@ function PageLayout({ children }: { children: Children }) {
           <a href="/markdown">Markdown</a>
           <a href="/star-wars">Data Fetching</a>
           <a href="/hello/alice">Routing</a>
+          <a href="/mdx-pages/hello-1">New Markdown</a>
         </Sidebar>
         <Content>{children}</Content>
       </Layout>
