@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { navigate } from "vite-plugin-ssr/client/router";
 import { Counter } from "./_components/Counter";
 import useWebSocket, { ReadyState } from "react-use-websocket";
-import { hostname, SOCKET_PORT } from "../consts";
+import { SOCKET_PORT } from "../consts";
 
 const filename = "hello-1.page.mdx";
 
@@ -10,10 +10,12 @@ export default IndexPage;
 
 function IndexPage() {
   const [value, setValue] = useState("");
+  const hostname = window.location.hostname;
 
   const [socketUrl, setSocketUrl] = useState(`ws://${hostname}:${SOCKET_PORT}`);
   console.log("socketUrl", socketUrl);
-  console.log("hostname", hostname);
+
+  // console.log("hostname", hostname);
   // const messageHistory = useRef([]);
 
   const { sendMessage, lastMessage, readyState } = useWebSocket(socketUrl);
