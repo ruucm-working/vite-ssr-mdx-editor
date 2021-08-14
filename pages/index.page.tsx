@@ -56,7 +56,7 @@ function IndexPage() {
       <div>
         editor
         <br />
-        <input
+        <textarea
           value={value}
           onChange={(e) => {
             const newValue = e.target.value;
