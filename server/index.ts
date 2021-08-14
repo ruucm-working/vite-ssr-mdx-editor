@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 console.log("dotenv", dotenv);
 dotenv.config();
 
-console.log("process.env.NODE_ENV", process.env.NODE_ENV);
+console.log("process.env.SERVER_ENV", process.env.SERVER_ENV);
 
 import { serverSocket } from "./server-socket";
 
