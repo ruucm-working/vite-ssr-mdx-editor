@@ -1,4 +1,4 @@
-// console.log("process.env.NODE_ENV", process.env.NODE_ENV);
+console.log("process.env.NODE_ENV (const)", process.env.NODE_ENV);
 
 export const hostname =
   process.env.NODE_ENV === "development"
