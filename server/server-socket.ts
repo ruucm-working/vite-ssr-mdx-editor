@@ -28,9 +28,12 @@ export function serverSocket(opts: any) {
     ({ filename, content }: any, cb = noop) => {
       const filepath = path.join(opts.dirname, filename);
       console.log("filepath", filepath);
+      console.log("content", content);
       if (!fs.existsSync(filepath)) return;
       try {
+        console.log("write");
         fs.writeFile(filepath, content, cb);
+        console.log("written");
       } catch (e) {
         const err = {
           text: e.toString(),
