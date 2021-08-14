@@ -12,6 +12,8 @@ function IndexPage() {
   const [value, setValue] = useState("");
 
   const [socketUrl, setSocketUrl] = useState(`ws://${hostname}:${SOCKET_PORT}`);
+  console.log("socketUrl", socketUrl);
+  console.log("hostname", hostname);
   // const messageHistory = useRef([]);
 
   const { sendMessage, lastMessage, readyState } = useWebSocket(socketUrl);
